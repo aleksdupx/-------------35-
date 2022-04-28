@@ -112,11 +112,6 @@ let createKr = function() {
 			scr.innerHTML = scores
 			box.style.display = 'none'
 		}
-		if(scores == 10) {
-			alert('You win!')
-		} if (scores == -5) {
-			alert('You lose.')
-		} 
 	}
 }
 timec = document.querySelector('.time')
@@ -134,6 +129,11 @@ intm = setInterval(tm, 1000)
 let int = setInterval(createKr, 1000)
 let stopGame = function() {
 	clearInterval(int)
+	if(scores >= 10) {
+			alert('You win!')
+		} else {
+			alert('You lose.')
+		} 
 }
 
 setTimeout(stopGame, 20000)
